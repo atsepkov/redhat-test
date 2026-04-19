@@ -1,0 +1,15 @@
+{
+  "name": "object-storage-service",
+  "scripts": {
+    "start": "bun run src/server.ts",
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "latest"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  }
+}

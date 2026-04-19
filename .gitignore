@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test artifacts
+*.txt
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
