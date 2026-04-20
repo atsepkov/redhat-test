@@ -80,7 +80,7 @@ If destination_file is unspecified, CLI will dump contents to STDOUT.
 
 ## Design Choices
 I prefer simplicity and my design choices reflect that:
-- I chose SQLite as the database due to its setup simplicity and lightweight footprint (many of my other projects on github use SQLite as well). The storage layer is designed for easy substitution: `src/storage/store.ts` implements an `IStorageEngine` interface, and `src/storage/factory.ts` selects the implementation at startup based on the `DB_TYPE` env var. Swapping in Postgres or another database requires only a new adapter file implementing the same interface — no changes to the server, router, or handlers.
+- I chose SQLite as the database due to its setup simplicity and lightweight footprint (many of my other projects on github use SQLite as well). The storage layer is designed for easy substitution: `src/storage/store.ts` implements an `IStorageEngine` interface, and `src/storage/factory.ts` selects the implementation at startup based on the `DB_TYPE` env var. Swapping in Postgres or another database requires only a new adapter file implementing the same interface (no changes to the server, router, or handlers).
 - JavaScript/TypeScript is well-suited for web-development and allows consistent language + design patterns on backend and frontend. I went with TypeScript due to additional type safety it introduces over regular JS, which is often desired in production-level systems.
 - I chose BunJS as the runtime as a modern alternative to NodeJS + Express, BunJS comes bundled with bun:test and bun:sqlite, further reducing the need for external dependencies.
 
